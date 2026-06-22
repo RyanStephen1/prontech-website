@@ -32,15 +32,14 @@ const CertificationsPage = () => {
   }, [selectedIndex]);
 
   const documents = [
-    { id: 1, title: "ISO 9001:2015", type: "Certification", img: `${certificateAssetBase}/iso-9001-2015-v2.webp` },
-    { id: 2, title: "ISO 45001:2018", type: "Certification", img: `${certificateAssetBase}/iso-45001-2018-v2.webp` },
-    { id: 3, title: "Investment License", type: "License", img: `${certificateAssetBase}/investment-license-v2.webp` },
-    { id: 4, title: "Company Registration", type: "Registration", img: `${certificateAssetBase}/company-registration-v2.webp` },
-    { id: 5, title: "Company Registration (Secondary)", type: "Registration", img: `${certificateAssetBase}/company-registration-secondary-v2.webp` },
-    { id: 6, title: "Chamber of Commerce", type: "Certificate", img: `${certificateAssetBase}/chamber-of-commerce-v2.webp` },
-    { id: 7, title: "GOSI Certificate", type: "Compliance", img: `${certificateAssetBase}/gosi-certificate-v2.webp` },
-    { id: 8, title: "Saudi VAT Registration", type: "Tax Certificate", img: `${certificateAssetBase}/saudi-vat-registration-v2.webp` },
-    { id: 9, title: "Saudization Certificate", type: "Compliance", img: `${certificateAssetBase}/saudization-certificate-v2.webp` },
+    { id: 1, title: "Certificate of Registration 1", type: "Registration", img: `${certificateAssetBase}/Cert%20Of%20Reg/Cert%20Of%20Reg%201.jpg` },
+    { id: 2, title: "Certificate of Registration 2", type: "Registration", img: `${certificateAssetBase}/Cert%20Of%20Reg/Cert%20Of%20Reg%202.jpg` },
+    { id: 3, title: "Certificate of Registration 3", type: "Registration", img: `${certificateAssetBase}/Cert%20Of%20Reg/Cert%20Of%20Reg%203.jpg` },
+    { id: 4, title: "Certificate of Registration 4", type: "Registration", img: `${certificateAssetBase}/Cert%20Of%20Reg/Cert%20Of%20Reg%204.jpg` },
+    { id: 5, title: "DOLE Registration", type: "Registration", img: `${certificateAssetBase}/DOLE%20Reg/Dole%20Registration%20.jpg` },
+    { id: 6, title: "Mayor's Permit", type: "Permit", img: `${certificateAssetBase}/Mayors%20Permit/Mayors%20Permit.jpg` },
+    { id: 7, title: "SEC Amended Articles of Incorporation", type: "Incorporation", img: `${certificateAssetBase}/SEC/SEC%20Amended%20Articles%20of%20Incorp.jpg` },
+    { id: 8, title: "SEC Certificate of Incorporation", type: "Incorporation", img: `${certificateAssetBase}/SEC/SEC%20Cert%20Of%20Incorporation.jpg` },
   ];
 
   const handleNext = useCallback((e?: React.MouseEvent) => {
