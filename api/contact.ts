@@ -84,7 +84,7 @@ export default {
         from: fromEmail,
         to: [toEmail],
         reply_to: email,
-        subject: `New ADK contact inquiry from ${name}`,
+        subject: `New Prontech contact inquiry from ${name}`,
         html: `
           <h2>New Contact Inquiry</h2>
           <p><strong>Name:</strong> ${safeName}</p>

@@ -194,7 +194,7 @@ const HomePage: React.FC = () => {
       {
         "@type": "LocalBusiness" as const,
         "@id": "https://adknprotech.com/#ph-localbusiness-home",
-        "name": "ADK Co., LTD. (Prontech Philippines)",
+        "name": "Prontech (Prontech Philippines)",
         "url": "https://adknprotech.com/",
         "image": "https://adknprotech.com/assets/og-image.jpg",
         "description": "Leading industrial engineering services, ship repair, marine maintenance, steel fabrication, industrial painting, and scaffolding in Batangas City, Luzon, Philippines.",
@@ -252,9 +252,9 @@ const HomePage: React.FC = () => {
     <div className="bg-surface text-on-surface antialiased">
       < m.div className="hidden" /> {/* Added a dummy motion element to verify component scope if needed, keeping simple */}
       <SEO
-        title="Industrial Engineering & Ship Repair Philippines (Luzon) | ADK Co., LTD."
-        description="ADK Co., LTD. (Prontech Philippines) is a leading provider of industrial engineering, ship repair, steel fabrication, industrial painting, and scaffolding across Luzon (Batangas City, Subic, Manila, CALABARZON) and KSA."
-        keywords="industrial engineering philippines, ship repair luzon, steel fabrication batangas, marine services subic, sandblasting painting calabarzon, industrial contractor philippines, ADK Philippines, Prontech Batangas, industrial scaffolding luzon, piping systems calabarzon"
+        title="Industrial Engineering & Ship Repair in Batangas City | Prontech"
+        description="Prontech (Prontech Philippines) provides premier industrial engineering, ship repair, steel fabrication, industrial painting, and scaffolding in Batangas City and across the Philippines."
+        keywords="industrial engineering batangas city, ship repair batangas city, steel fabrication batangas city, industrial contractor batangas city, Prontech Batangas"
         path="/"
         structuredData={phStructuredData}
       />
@@ -366,7 +366,7 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        {/* About ADK Section (V2) - Redesigned to Industrial Architect Specs */}
+        {/* About Prontech Section (V2) - Redesigned to Industrial Architect Specs */}
         <section className="relative overflow-hidden bg-surface-container-low py-20 sm:py-24 md:py-32 xl:py-40">
           {/* Schematic Grid Background Accent */}
           <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
@@ -395,7 +395,7 @@ const HomePage: React.FC = () => {
                   </h2>
 
                   <p className="body-lg max-w-md border-l-2 border-primary pl-5 leading-relaxed text-on-surface-variant sm:pl-8">
-                    ADK Co., LTD. has redefined the standards of global marine engineering through four decades of rigorous technical advancement and field-tested reliability.
+                    Prontech has redefined the standards of global marine engineering through four decades of rigorous technical advancement and field-tested reliability.
                   </p>
                 </div>
 
@@ -447,7 +447,7 @@ const HomePage: React.FC = () => {
                           Our specialized shipyard operations and surface treatment solutions are built on the rigorous standards required for massive-scale maritime infrastructure.
                         </p>
                         <p>
-                          Strategically located in South Korea, Jubail (Saudi Arabia), and the Philippines (with our main Luzon facility in Batangas City), ADK delivers rapid-response industrial products and solutions worldwide. Our Batangas facility coordinates ship repair, steel fabrication, and mechanical engineering services across Luzon and the wider archipelago.
+                          Strategically located in South Korea, Jubail (Saudi Arabia), and the Philippines (with our main Luzon facility in Batangas City), Prontech delivers rapid-response industrial products and solutions worldwide. Our Batangas facility coordinates ship repair, steel fabrication, and mechanical engineering services across Luzon and the wider archipelago.
                         </p>
                       </div>
                     </div>
@@ -613,7 +613,7 @@ const HomePage: React.FC = () => {
 
           <div className="relative z-10 mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8 xl:px-10">
             <div className="mb-20 max-w-4xl mx-auto text-center">
-              <span className="label-md text-primary mb-6 block font-black tracking-[0.4em] uppercase">The ADK Standard</span>
+              <span className="label-md text-primary mb-6 block font-black tracking-[0.4em] uppercase">The Prontech Standard</span>
               <h2 className="text-5xl font-black uppercase italic tracking-tighter text-on-background sm:text-6xl lg:text-7xl xl:text-8xl">
                 Core <span className="text-primary">Values.</span>
               </h2>
@@ -839,7 +839,7 @@ const HomePage: React.FC = () => {
             <h2 className="mb-10 text-3xl font-extrabold uppercase italic tracking-tighter text-white sm:text-4xl md:mb-12 md:text-5xl lg:mb-14 lg:text-6xl">Precision-Built for the World's Harshest Environments.</h2>
             <Link to="/#contact" className="inline-flex min-h-12 items-center justify-center bg-white px-8 py-4 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-on-background transition-all hover:bg-primary">Start a Conversation</Link>
           </div>
-          <div className="absolute -bottom-10 right-0 select-none text-[8rem] font-black leading-none text-white/5 sm:-bottom-16 sm:text-[12rem] lg:-right-20 lg:-bottom-20 lg:text-[20rem]">ADK</div>
+          <div className="absolute -bottom-10 right-0 select-none text-[8rem] font-black leading-none text-white/5 sm:-bottom-16 sm:text-[12rem] lg:-right-20 lg:-bottom-20 lg:text-[20rem]">Prontech</div>
         </section>
       </main>
     </div >

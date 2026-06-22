@@ -11,9 +11,9 @@ const TermsOfServicePage: React.FC = () => {
   return (
     <div className="bg-surface text-on-surface antialiased">
       <SEO
-        title="Terms of Service | ADK Co., LTD. Philippines"
-        description="Standard terms and conditions for industrial service engagements with ADK Co., LTD. in the Philippines and KSA."
-        keywords="terms of service, engagement conditions, ADK legal, industrial service terms, Philippines, KSA"
+        title="Terms of Service | Prontech Philippines"
+        description="Standard terms and conditions for industrial service engagements with Prontech in the Philippines and KSA."
+        keywords="terms of service, engagement conditions, Prontech legal, industrial service terms, Philippines, KSA"
         path="/terms-of-service"
       />
 
@@ -31,7 +31,7 @@ const TermsOfServicePage: React.FC = () => {
                 Terms <br /><span className="text-white/40 italic font-medium opacity-80">of Service</span>
               </h1>
               <p className="max-w-2xl border-l border-primary/40 pl-4 text-base font-light leading-relaxed text-white/90 sm:pl-6 sm:text-lg md:pl-8 lg:text-xl">
-                Defining the regulatory and operational boundaries governing all professional engagements and technical consultancies with ADK Co., LTD.
+                Defining the regulatory and operational boundaries governing all professional engagements and technical consultancies with Prontech
               </p>
             </m.div>
           </div>
@@ -51,10 +51,10 @@ const TermsOfServicePage: React.FC = () => {
             >
               <span className="mb-4 block text-[11px] font-black uppercase tracking-[0.3em] text-primary">Terms Of Use</span>
               <h2 className="mb-4 text-3xl font-black tracking-tight text-on-background sm:text-4xl">
-                ADK Co., LTD. Website Terms Of Use
+                Prontech Website Terms Of Use
               </h2>
               <p className="max-w-3xl text-sm leading-7 text-on-surface-variant sm:text-base sm:leading-8">
-                These Terms govern use of this website and its content, including general informational use, business inquiries, and related interactions. They are written for ADK&apos;s Saudi-facing website presence and should be read together with the Privacy Policy and any project-specific contract or commercial agreement.
+                These Terms govern use of this website and its content, including general informational use, business inquiries, and related interactions. They are written for Prontech&apos;s Saudi-facing website presence and should be read together with the Privacy Policy and any project-specific contract or commercial agreement.
               </p>
               <p className="mt-4 text-sm font-medium text-on-surface-variant/80">
                 Last updated: March 28, 2026

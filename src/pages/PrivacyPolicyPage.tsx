@@ -11,9 +11,9 @@ const PrivacyPolicyPage: React.FC = () => {
   return (
     <div className="bg-surface text-on-surface antialiased">
       <SEO
-        title="Privacy Policy | ADK Co., LTD. Philippines"
-        description="Privacy policy and data protection protocols for ADK Co., LTD. in the Philippines and Saudi Arabia."
-        keywords="privacy policy, data protection, ADK privacy, Philippine data privacy act, PDPL Saudi Arabia"
+        title="Privacy Policy | Prontech Philippines"
+        description="Privacy policy and data protection protocols for Prontech in the Philippines and Saudi Arabia."
+        keywords="privacy policy, data protection, Prontech privacy, Philippine data privacy act, PDPL Saudi Arabia"
         path="/privacy-policy"
       />
 
@@ -51,10 +51,10 @@ const PrivacyPolicyPage: React.FC = () => {
             >
               <span className="mb-4 block text-[11px] font-black uppercase tracking-[0.3em] text-primary">Privacy Policy</span>
               <h2 className="mb-4 text-3xl font-black tracking-tight text-on-background sm:text-4xl">
-                ADK Co., LTD. Website Privacy Policy
+                Prontech Website Privacy Policy
               </h2>
               <p className="max-w-3xl text-sm leading-7 text-on-surface-variant sm:text-base sm:leading-8">
-                This Privacy Policy explains how we collect, use, disclose, retain, and protect personal data obtained through this website and related business communications. It is written for ADK&apos;s Saudi-facing website operations and is intended to align with applicable Saudi privacy expectations, including the Personal Data Protection Law where relevant.
+                This Privacy Policy explains how we collect, use, disclose, retain, and protect personal data obtained through this website and related business communications. It is written for Prontech&apos;s Saudi-facing website operations and is intended to align with applicable Saudi privacy expectations, including the Personal Data Protection Law where relevant.
               </p>
               <p className="mt-4 text-sm font-medium text-on-surface-variant/80">
                 Last updated: March 28, 2026

@@ -125,7 +125,7 @@ const EngagementGalleryPage = () => {
   return (
     <div className="min-h-screen bg-surface text-on-surface antialiased">
       <SEO
-        title={`${engagement.shortName} Project Gallery | ADK Co., LTD. ${isPH ? 'Luzon, Philippines' : displayLoc}`}
+        title={`${engagement.shortName} Project Gallery | Prontech ${isPH ? 'Luzon, Philippines' : displayLoc}`}
         description={`Explore the project gallery for ${engagement.name}. Technical documentation of industrial engineering services in ${isPH ? 'Luzon, Philippines' : displayLoc}.`}
         keywords={isPH 
           ? `industrial projects philippines, scaffolding luzon, pipe fabrication batangas, ${engagement.shortName.toLowerCase()} gallery, industrial contractor philippines, shipyard services luzon`

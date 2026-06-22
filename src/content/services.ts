@@ -87,8 +87,8 @@ export const serviceCategories: ServiceContent[] = [
     description: 'Integrated mechanical and electrical services for plant equipment installation, commissioning, and optimization.',
     features: [
       { name: 'Plant Equipment Setup', detail: 'Precision and technical foresight are at the heart of every project we oversee, ensuring the seamless integration of complex plant machinery and pipeline networks.' },
-      { name: 'Electrical Systems', detail: 'ADK provides end-to-end erection, installation, and commissioning services designed to transform complex electrical infrastructure into fully operational assets.' },
-      { name: 'Testing & Verification', detail: 'ADK delivers comprehensive testing and performance verification services designed to ensure the integrity and reliability of your critical infrastructure.' },
+      { name: 'Electrical Systems', detail: 'Prontech provides end-to-end erection, installation, and commissioning services designed to transform complex electrical infrastructure into fully operational assets.' },
+      { name: 'Testing & Verification', detail: 'Prontech delivers comprehensive testing and performance verification services designed to ensure the integrity and reliability of your critical infrastructure.' },
     ],
   },
   {

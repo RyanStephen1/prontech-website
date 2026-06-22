@@ -57,7 +57,7 @@ const Navbar = () => {
             <div className="h-10 sm:h-12 md:h-14 lg:h-16 flex items-center justify-center relative z-10" style={{ minWidth: 'clamp(140px, 30vw, 240px)', aspectRatio: '400/72' }}>
               <img
                 src={assetPaths.brand.logoMark}
-                alt="ADK Co., LTD"
+                alt="Prontech"
                 className="h-full w-auto object-contain transition-transform group-hover:scale-105"
                 width={400}
                 height={72}

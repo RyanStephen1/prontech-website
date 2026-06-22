@@ -78,7 +78,7 @@ const PartnersPage = () => {
   return (
     <div className="bg-surface text-on-surface antialiased">
       <SEO
-        title="Industrial Partners & Clients in Luzon, Philippines | ADK Co., LTD."
+        title="Industrial Partners & Clients in Luzon, Philippines | Prontech"
         description="Partnering with major energy, maritime, and petrochemical complexes in Luzon, Philippines, including JG Summit, Shell Tabangao, AG&P, and 1590 Energy."
         keywords="industrial partners philippines, strategic alliances luzon, energy clients batangas, marine partners subic, shell tabangao partners, jg summit petrochemical, agp modular construction, 1590 energy la union"
         path="/partners"

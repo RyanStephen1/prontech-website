@@ -156,8 +156,8 @@ const CertificationsPage = () => {
   return (
     <div className="bg-surface text-on-surface antialiased">
       <SEO
-        title="Industrial Quality Standards & Certifications Philippines | ADK Co., LTD."
-        description="ADK Co., LTD. maintains international quality (ISO 9001:2015) and safety (ISO 45001:2018) certifications for industrial engineering, ship repair, and steel fabrication operations in Luzon (Batangas, Subic), Philippines and Saudi Arabia."
+        title="Industrial Quality Standards & Certifications Philippines | Prontech"
+        description="Prontech maintains international quality (ISO 9001:2015) and safety (ISO 45001:2018) certifications for industrial engineering, ship repair, and steel fabrication operations in Luzon (Batangas, Subic), Philippines and Saudi Arabia."
         keywords="industrial certifications philippines, engineering quality standards luzon, iso 9001 2015 philippines, iso 45001 2018 luzon, industrial safety batangas, ship repair compliance subic, safety certifications calabarzon"
         path="/certifications"
       />

@@ -64,8 +64,8 @@ const ServicesPage = () => {
   return (
     <div className="bg-surface text-on-surface antialiased">
       <SEO
-        title="Industrial Engineering & Marine Services in Luzon | ADK Co., LTD."
-        description="ADK Co., LTD. provides high-precision industrial engineering, ship repair, piping systems, steel fabrication, sandblasting, and scaffolding services across Luzon (Batangas, Subic, CALABARZON) and Jubail, KSA."
+        title="Industrial Engineering & Marine Services in Luzon | Prontech"
+        description="Prontech provides high-precision industrial engineering, ship repair, piping systems, steel fabrication, sandblasting, and scaffolding services across Luzon (Batangas, Subic, CALABARZON) and Jubail, KSA."
         keywords="industrial engineering services philippines, ship repair luzon, steel fabrication batangas, marine engineering subic, piping systems calabarzon, industrial scaffolding luzon, sandblasting painting philippines, asset integrity management"
         path="/services"
       />

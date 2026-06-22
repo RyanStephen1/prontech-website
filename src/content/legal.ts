@@ -5,7 +5,7 @@ export const privacyPolicySections: LegalSection[] = [
     id: '01',
     title: 'Scope And Controller Information',
     body: [
-      'This Privacy Policy explains how ADK Co., LTD. collects, uses, stores, shares, and protects personal data obtained through this website, including inquiry forms, project request submissions, business communications, and related website interactions.',
+      'This Privacy Policy explains how Prontech collects, uses, stores, shares, and protects personal data obtained through this website, including inquiry forms, project request submissions, business communications, and related website interactions.',
       'For visitors, customers, suppliers, and business representatives in the Kingdom of Saudi Arabia, this policy is intended to support compliance with the Saudi Personal Data Protection Law (PDPL) and its implementing rules, in addition to any other applicable legal or contractual obligations.',
     ],
   },
@@ -45,7 +45,7 @@ export const privacyPolicySections: LegalSection[] = [
     id: '06',
     title: 'International Transfers',
     body: [
-      'Because ADK operates internationally, personal data may be accessed or processed in jurisdictions outside the Kingdom of Saudi Arabia where this is necessary for website hosting, communications, project coordination, or support services. Where such transfers occur, we intend to implement safeguards and procedures consistent with applicable Saudi legal requirements, including the PDPL where relevant.',
+      'Because Prontech operates internationally, personal data may be accessed or processed in jurisdictions outside the Kingdom of Saudi Arabia where this is necessary for website hosting, communications, project coordination, or support services. Where such transfers occur, we intend to implement safeguards and procedures consistent with applicable Saudi legal requirements, including the PDPL where relevant.',
     ],
   },
   {
@@ -103,7 +103,7 @@ export const termsOfUseSections: LegalSection[] = [
     id: '02',
     title: 'Purpose Of This Website',
     body: [
-      'This website is provided for general information about ADK Co., LTD., its industrial services, technical capabilities, business operations, and contact channels. Content on this website is intended for business and informational purposes only unless expressly stated otherwise.',
+      'This website is provided for general information about Prontech, its industrial services, technical capabilities, business operations, and contact channels. Content on this website is intended for business and informational purposes only unless expressly stated otherwise.',
       'Submission of an inquiry, request for quotation, or project briefing through this website does not by itself create a binding contractual relationship.',
     ],
   },
@@ -111,7 +111,7 @@ export const termsOfUseSections: LegalSection[] = [
     id: '03',
     title: 'Permitted Use',
     body: [
-      'You may use this website only for lawful purposes and in a way that does not infringe the rights of ADK or any third party, does not restrict or interfere with website operations, and does not attempt unauthorized access to systems, forms, content, or infrastructure.',
+      'You may use this website only for lawful purposes and in a way that does not infringe the rights of Prontech or any third party, does not restrict or interfere with website operations, and does not attempt unauthorized access to systems, forms, content, or infrastructure.',
       'You agree not to misuse the website through fraud, scraping, reverse engineering, transmission of malicious code, interference with security controls, or any activity that may damage, disable, overburden, or impair the website.',
     ],
   },
@@ -119,7 +119,7 @@ export const termsOfUseSections: LegalSection[] = [
     id: '04',
     title: 'Accuracy Of Information',
     body: [
-      'ADK aims to keep website content accurate and up to date, but we do not guarantee that all content is complete, current, or free from error at all times. Technical descriptions, project references, service information, and contact information may be updated, modified, or removed without notice.',
+      'Prontech aims to keep website content accurate and up to date, but we do not guarantee that all content is complete, current, or free from error at all times. Technical descriptions, project references, service information, and contact information may be updated, modified, or removed without notice.',
       'Any reliance you place on website content is at your own risk, and you should contact us directly if you require confirmation of specific service, compliance, project, or commercial details.',
     ],
   },
@@ -128,14 +128,14 @@ export const termsOfUseSections: LegalSection[] = [
     title: 'Project Inquiries And Submitted Materials',
     body: [
       'Where you submit inquiries, attachments, specifications, drawings, or other materials through the website or related contact channels, you confirm that you have the right to provide such materials and that the information you provide is accurate to the best of your knowledge.',
-      'ADK may review submitted materials for the purpose of assessing business opportunities, preparing responses, evaluating scope, and managing communications, subject to our Privacy Policy and any applicable confidentiality obligations.',
+      'Prontech may review submitted materials for the purpose of assessing business opportunities, preparing responses, evaluating scope, and managing communications, subject to our Privacy Policy and any applicable confidentiality obligations.',
     ],
   },
   {
     id: '06',
     title: 'Intellectual Property',
     body: [
-      'Unless otherwise stated, this website and its contents, including text, graphics, branding, logos, design elements, layouts, technical descriptions, and other materials, are owned by or licensed to ADK Co., LTD. and are protected by applicable intellectual property laws.',
+      'Unless otherwise stated, this website and its contents, including text, graphics, branding, logos, design elements, layouts, technical descriptions, and other materials, are owned by or licensed to Prontech and are protected by applicable intellectual property laws.',
       'You may not reproduce, modify, publish, distribute, exploit, or create derivative works from website content without prior written permission, except to the limited extent permitted by applicable law.',
     ],
   },
@@ -143,7 +143,7 @@ export const termsOfUseSections: LegalSection[] = [
     id: '07',
     title: 'Third-Party Links And External Services',
     body: [
-      'This website may contain links to third-party websites, services, or resources for convenience and reference. ADK does not control and is not responsible for the content, accuracy, availability, or practices of third-party sites.',
+      'This website may contain links to third-party websites, services, or resources for convenience and reference. Prontech does not control and is not responsible for the content, accuracy, availability, or practices of third-party sites.',
       'Accessing third-party websites is at your own risk, and you should review their own terms, privacy notices, and policies.',
     ],
   },
@@ -151,7 +151,7 @@ export const termsOfUseSections: LegalSection[] = [
     id: '08',
     title: 'No Warranty',
     body: [
-      'This website and its contents are provided on an "as is" and "as available" basis to the fullest extent permitted by applicable law. ADK makes no express or implied warranties regarding website availability, uninterrupted access, security, merchantability, fitness for a particular purpose, or non-infringement.',
+      'This website and its contents are provided on an "as is" and "as available" basis to the fullest extent permitted by applicable law. Prontech makes no express or implied warranties regarding website availability, uninterrupted access, security, merchantability, fitness for a particular purpose, or non-infringement.',
       'We do not warrant that the website will always be free from delay, interruption, error, or harmful components.',
     ],
   },
@@ -159,7 +159,7 @@ export const termsOfUseSections: LegalSection[] = [
     id: '09',
     title: 'Limitation Of Liability',
     body: [
-      'To the fullest extent permitted by applicable law, ADK shall not be liable for any direct, indirect, incidental, consequential, special, or punitive loss or damage arising out of or connected with use of, inability to use, or reliance on this website or its contents.',
+      'To the fullest extent permitted by applicable law, Prontech shall not be liable for any direct, indirect, incidental, consequential, special, or punitive loss or damage arising out of or connected with use of, inability to use, or reliance on this website or its contents.',
       'Nothing in these Terms excludes liability to the extent such exclusion is not permitted under applicable law.',
     ],
   },
@@ -168,7 +168,7 @@ export const termsOfUseSections: LegalSection[] = [
     title: 'Privacy And Data Protection',
     body: [
       'Your use of this website may involve the collection and processing of personal data. Please refer to our Privacy Policy for information about how personal data is collected, used, disclosed, retained, and protected.',
-      'If you submit information to ADK through this website, you acknowledge that such processing may occur in accordance with our Privacy Policy and applicable legal requirements.',
+      'If you submit information to Prontech through this website, you acknowledge that such processing may occur in accordance with our Privacy Policy and applicable legal requirements.',
     ],
   },
   {
@@ -183,7 +183,7 @@ export const termsOfUseSections: LegalSection[] = [
     id: '12',
     title: 'Changes To These Terms',
     body: [
-      'ADK may update these Terms from time to time to reflect legal, operational, commercial, or website changes. Updated Terms become effective when posted on this page unless stated otherwise.',
+      'Prontech may update these Terms from time to time to reflect legal, operational, commercial, or website changes. Updated Terms become effective when posted on this page unless stated otherwise.',
       'Your continued use of the website after changes are posted constitutes acceptance of the revised Terms.',
     ],
   },
@@ -191,7 +191,7 @@ export const termsOfUseSections: LegalSection[] = [
     id: '13',
     title: 'Contact',
     body: [
-      'If you have questions about these Terms of Use or wish to contact ADK regarding website-related legal matters, you may use the contact information provided on this website.',
+      'If you have questions about these Terms of Use or wish to contact Prontech regarding website-related legal matters, you may use the contact information provided on this website.',
       'For contractual, project-specific, or compliance-related matters, the relevant signed agreement or formal communication channel should be used where applicable.',
     ],
   },
