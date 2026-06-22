@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { Suspense, lazy, useEffect } from 'react';
 import type { RouteObject } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';

@@ -119,12 +119,17 @@ const EngagementGalleryPage = () => {
     return <Navigate to="/history" replace />;
   }
 
+  const isPH = engagement.location === 'Philippines';
+  const displayLoc = engagement.location || 'Global';
+
   return (
     <div className="min-h-screen bg-surface text-on-surface antialiased">
       <SEO
-        title={`${engagement.shortName} Project Gallery | ADK Co., LTD. Jubail, KSA`}
-        description={`Project gallery for ${engagement.name}. Industrial engineering services and projects in Jubail, KSA.`}
-        keywords="industrial projects Jubail, engineering gallery KSA, ADK projects Saudi Arabia"
+        title={`${engagement.shortName} Project Gallery | ADK Co., LTD. ${isPH ? 'Luzon, Philippines' : displayLoc}`}
+        description={`Explore the project gallery for ${engagement.name}. Technical documentation of industrial engineering services in ${isPH ? 'Luzon, Philippines' : displayLoc}.`}
+        keywords={isPH 
+          ? `industrial projects philippines, scaffolding luzon, pipe fabrication batangas, ${engagement.shortName.toLowerCase()} gallery, industrial contractor philippines, shipyard services luzon`
+          : `industrial projects, engineering gallery, ${engagement.shortName.toLowerCase()} projects, global industrial engineering`}
         path={engagement.galleryPath}
       />
 

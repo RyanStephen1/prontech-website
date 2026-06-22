@@ -78,9 +78,9 @@ const PartnersPage = () => {
   return (
     <div className="bg-surface text-on-surface antialiased">
       <SEO
-        title="Global Partners in Jubail, KSA | ADK Co., LTD."
-        description="Explore ADK Co., LTD.'s strategic alliances with global industry leaders across shipbuilding, energy, and maritime sectors in Jubail, KSA and worldwide."
-        keywords="industrial partners Jubail, global engineering alliances KSA, ADK strategic partners Saudi Arabia"
+        title="Industrial Partners & Clients in Luzon, Philippines | ADK Co., LTD."
+        description="Partnering with major energy, maritime, and petrochemical complexes in Luzon, Philippines, including JG Summit, Shell Tabangao, AG&P, and 1590 Energy."
+        keywords="industrial partners philippines, strategic alliances luzon, energy clients batangas, marine partners subic, shell tabangao partners, jg summit petrochemical, agp modular construction, 1590 energy la union"
         path="/partners"
       />
 

@@ -48,6 +48,7 @@ export const historyEngagements: HistoryEngagement[] = [
       { id: 'structural-steel', label: 'Structural Steel' },
       { id: 'ship-repair', label: 'Ship Repair' },
     ],
+    location: 'Saudi Arabia',
   },
   {
     id: 'siemens-energy',
@@ -63,6 +64,7 @@ export const historyEngagements: HistoryEngagement[] = [
     scopes: [
       { id: 'blasting', label: 'Blasting' },
     ],
+    location: 'Global',
   },
   {
     id: '1590-energy',
@@ -80,5 +82,6 @@ export const historyEngagements: HistoryEngagement[] = [
       { id: 'scaffolding', label: 'Scaffolding' },
       { id: 'fuel-line', label: 'Fuel Line' },
     ],
+    location: 'Philippines',
   },
 ];

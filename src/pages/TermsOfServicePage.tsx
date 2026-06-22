@@ -11,8 +11,9 @@ const TermsOfServicePage: React.FC = () => {
   return (
     <div className="bg-surface text-on-surface antialiased">
       <SEO
-        title="Terms of Service | ADK Co., LTD."
-        description="Standard terms and conditions for industrial service engagements with ADK Co., LTD."
+        title="Terms of Service | ADK Co., LTD. Philippines"
+        description="Standard terms and conditions for industrial service engagements with ADK Co., LTD. in the Philippines and KSA."
+        keywords="terms of service, engagement conditions, ADK legal, industrial service terms, Philippines, KSA"
         path="/terms-of-service"
       />
 

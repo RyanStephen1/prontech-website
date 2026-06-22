@@ -11,8 +11,9 @@ const PrivacyPolicyPage: React.FC = () => {
   return (
     <div className="bg-surface text-on-surface antialiased">
       <SEO
-        title="Privacy Policy | ADK Co., LTD."
-        description="Privacy policy and data protection protocols for ADK Co., LTD."
+        title="Privacy Policy | ADK Co., LTD. Philippines"
+        description="Privacy policy and data protection protocols for ADK Co., LTD. in the Philippines and Saudi Arabia."
+        keywords="privacy policy, data protection, ADK privacy, Philippine data privacy act, PDPL Saudi Arabia"
         path="/privacy-policy"
       />
 

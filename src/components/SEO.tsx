@@ -20,8 +20,8 @@ const SEO: React.FC<SEOProps> = ({
   structuredData,
   canonicalUrl,
 }) => {
-  const url = canonicalUrl || `https://adknprotech.com${path}`;
-  const defaultImage = "https://adknprotech.com/assets/og-image.jpg"; // Updated to a local asset or consistent domain
+  const url = canonicalUrl || `https://prontech1.com${path}`;
+  const defaultImage = "https://prontech1.com/assets/og-image.jpg"; // Updated to a local asset or consistent domain
 
   return (
     <Helmet>
@@ -39,7 +39,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image || defaultImage} />
       <meta property="og:locale" content="en_US" />
-      <meta property="og:site_name" content="ADK Co., LTD" />
+      <meta property="og:site_name" content="Prontech Construction Ltd. Corp." />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />

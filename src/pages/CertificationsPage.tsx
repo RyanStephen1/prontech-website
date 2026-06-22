@@ -119,9 +119,9 @@ const CertificationsPage = () => {
   return (
     <div className="bg-surface text-on-surface antialiased">
       <SEO
-        title="Certifications & Licenses in Jubail, KSA | ADK Co., LTD."
-        description="Official licenses, company registrations, and international ISO certifications supporting high-standard industrial delivery and services in Jubail, KSA."
-        keywords="industrial certifications Jubail, ISO certifications KSA, engineering licenses Saudi Arabia, ADK Co. LTD certifications"
+        title="Industrial Quality Standards & Certifications Philippines | ADK Co., LTD."
+        description="ADK Co., LTD. maintains international quality (ISO 9001:2015) and safety (ISO 45001:2018) certifications for industrial engineering, ship repair, and steel fabrication operations in Luzon (Batangas, Subic), Philippines and Saudi Arabia."
+        keywords="industrial certifications philippines, engineering quality standards luzon, iso 9001 2015 philippines, iso 45001 2018 luzon, industrial safety batangas, ship repair compliance subic, safety certifications calabarzon"
         path="/certifications"
       />
 

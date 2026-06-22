@@ -24,7 +24,7 @@ const Footer = () => {
               >
                 <img
                   src={assetPaths.brand.logoFull}
-                  alt="ADK Co., LTD"
+                  alt="Prontech Construction Ltd. Corp."
                   className="block w-full h-auto object-contain"
                   width={200}
                   height={80}
@@ -85,7 +85,7 @@ const Footer = () => {
       <div className="bg-black/30 py-5 sm:py-6 relative z-10">
         <div className="max-w-screen-2xl mx-auto px-5 sm:px-6 md:px-10 flex flex-col md:flex-row justify-between items-center md:items-start gap-4 sm:gap-5">
           <p className="label-sm text-white/70 text-center md:text-left">
-            Copyright {currentYear} ADK Co., LTD. All Rights Reserved.
+            Copyright {currentYear} Prontech Construction LTD. Corp. All Rights Reserved.
           </p>
           <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 sm:gap-x-8" role="list" aria-label="Certifications">
             <span className="label-sm text-white/70" role="listitem">ISO 9001:2015</span>

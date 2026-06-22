@@ -66,7 +66,7 @@ const HomePage: React.FC = () => {
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
-    const successParam = params.get('success');    if (successParam === 'true') {
+    const successParam = params.get('success'); if (successParam === 'true') {
       window.history.replaceState({}, '', import.meta.env.BASE_URL);
     }
 
@@ -188,13 +188,75 @@ const HomePage: React.FC = () => {
 
   const specializationOptions = getSpecializationOptions(contactForm.service);
 
+  const phStructuredData = {
+    "@context": "https://schema.org" as const,
+    "@graph": [
+      {
+        "@type": "LocalBusiness" as const,
+        "@id": "https://adknprotech.com/#ph-localbusiness-home",
+        "name": "ADK Co., LTD. (Prontech Philippines)",
+        "url": "https://adknprotech.com/",
+        "image": "https://adknprotech.com/assets/og-image.jpg",
+        "description": "Leading industrial engineering services, ship repair, marine maintenance, steel fabrication, industrial painting, and scaffolding in Batangas City, Luzon, Philippines.",
+        "telephone": "+63-917-117-6242",
+        "email": "sales@prontech1.com",
+        "priceRange": "$$$",
+        "address": {
+          "@type": "PostalAddress" as const,
+          "streetAddress": "Sitio Bulihan, Tabangao Ambulong",
+          "addressLocality": "Batangas City",
+          "addressRegion": "Calabarzon, Luzon",
+          "postalCode": "4200",
+          "addressCountry": "PH"
+        },
+        "areaServed": [
+          {
+            "@type": "AdministrativeArea" as const,
+            "name": "Luzon"
+          },
+          {
+            "@type": "AdministrativeArea" as const,
+            "name": "Calabarzon"
+          },
+          {
+            "@type": "AdministrativeArea" as const,
+            "name": "Batangas City"
+          },
+          {
+            "@type": "AdministrativeArea" as const,
+            "name": "Subic"
+          },
+          {
+            "@type": "AdministrativeArea" as const,
+            "name": "Manila"
+          },
+          {
+            "@type": "Country" as const,
+            "name": "Philippines"
+          }
+        ],
+        "knowsAbout": [
+          "Ship Repair and Marine Maintenance",
+          "Industrial Piping Systems",
+          "Structural Steel Engineering",
+          "Surface Preparation & Blasting",
+          "Industrial Coating & Painting",
+          "Industrial Scaffolding",
+          "Thermal & Acoustic Insulation"
+        ]
+      }
+    ]
+  };
+
   return (
     <div className="bg-surface text-on-surface antialiased">
+      < m.div className="hidden" /> {/* Added a dummy motion element to verify component scope if needed, keeping simple */}
       <SEO
-        title="ADK Co., LTD | Industrial Engineering Services & Products in Jubail, KSA"
-        description="Top industrial services provider in Jubail, KSA. Specializing in precision engineering, infrastructure maintenance, surface treatment, and industrial products since 1985."
-        keywords="industrial services Jubail, engineering products KSA, surface treatment Saudi Arabia, maritime excellence Jubail, ADK Jubail"
+        title="Industrial Engineering & Ship Repair Philippines (Luzon) | ADK Co., LTD."
+        description="ADK Co., LTD. (Prontech Philippines) is a leading provider of industrial engineering, ship repair, steel fabrication, industrial painting, and scaffolding across Luzon (Batangas City, Subic, Manila, CALABARZON) and KSA."
+        keywords="industrial engineering philippines, ship repair luzon, steel fabrication batangas, marine services subic, sandblasting painting calabarzon, industrial contractor philippines, ADK Philippines, Prontech Batangas, industrial scaffolding luzon, piping systems calabarzon"
         path="/"
+        structuredData={phStructuredData}
       />
 
       <main>
@@ -317,8 +379,13 @@ const HomePage: React.FC = () => {
               {/* Left Column: Editorial Authority (Span 5) */}
               <div className="space-y-10 lg:col-span-5">
                 <div className="space-y-6 sm:space-y-8">
-                  <div className="inline-flex items-center px-3 py-1 bg-tertiary-container text-on-tertiary-container rounded-sm">
-                    <span className="label-sm font-black">EST. 1985 / BUSAN KOREA</span>
+                  <div className="flex flex-wrap gap-2">
+                    <div className="inline-flex items-center px-3 py-1 bg-tertiary-container text-on-tertiary-container rounded-sm">
+                      <span className="label-sm font-black">EST. 1985 / BUSAN KOREA</span>
+                    </div>
+                    <div className="inline-flex items-center px-3 py-1 bg-primary/10 text-primary rounded-sm">
+                      <span className="label-sm font-black">LUZON HEADQUARTERS / BATANGAS CITY</span>
+                    </div>
                   </div>
 
                   <h2 className="text-4xl font-black uppercase italic leading-[0.9] tracking-tighter text-on-background sm:text-5xl lg:text-6xl xl:text-7xl">
@@ -380,7 +447,7 @@ const HomePage: React.FC = () => {
                           Our specialized shipyard operations and surface treatment solutions are built on the rigorous standards required for massive-scale maritime infrastructure.
                         </p>
                         <p>
-                          Strategically located in South Korea, Jubail (Saudi Arabia), and the Philippines, ADK delivers rapid-response industrial products and solutions worldwide.
+                          Strategically located in South Korea, Jubail (Saudi Arabia), and the Philippines (with our main Luzon facility in Batangas City), ADK delivers rapid-response industrial products and solutions worldwide. Our Batangas facility coordinates ship repair, steel fabrication, and mechanical engineering services across Luzon and the wider archipelago.
                         </p>
                       </div>
                     </div>
@@ -420,7 +487,7 @@ const HomePage: React.FC = () => {
         <section className="relative overflow-hidden bg-white py-20 sm:py-24 md:py-32 xl:py-36">
           {/* Section ID or Coordinate Detail */}
           <div className="absolute top-24 right-10 label-sm text-primary/20 rotate-90 origin-right hidden xl:block">
-       </div>
+          </div>
 
           <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-8 xl:px-10">
             <div className="mb-14 max-w-5xl sm:mb-16 md:mb-20 xl:mb-24">

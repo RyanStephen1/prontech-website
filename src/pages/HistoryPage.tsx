@@ -65,8 +65,9 @@ const HistoryPage = () => {
   return (
     <div className="bg-surface text-on-surface antialiased">
       <SEO
-        title="History & Legacy | ADK Co., LTD."
-        description="Over 40 years of precision engineering excellence and trusted global partnerships."
+        title="Industrial Projects & Legacy in Luzon, Philippines | Prontech Construction LTD. Corp."
+        description="Explore our 40-year legacy of large-scale industrial projects and active ship repair/mechanical engineering engagements across Luzon, Philippines (Batangas, Subic, La Union) and Jubail, KSA."
+        keywords="industrial project history philippines, marine engineering legacy luzon, shell tabangao refinery batangas, jg summit calabarzon, 1590 energy la union, hanjin subic shipyard, ship repair track record philippines, ADK history"
         path="/history"
       />
 

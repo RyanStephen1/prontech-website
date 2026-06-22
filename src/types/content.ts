@@ -51,6 +51,7 @@ export interface HistoryEngagement {
   galleryIntro: string;
   galleryEmptyState: string;
   scopes: HistoryEngagementScope[];
+  location?: string;
 }
 
 export interface LegalSection {
