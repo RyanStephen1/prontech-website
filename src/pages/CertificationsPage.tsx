@@ -11,7 +11,8 @@ const scannedDocumentStyle: CSSProperties & { WebkitOptimizeContrast?: 'initial'
 };
 
 const CertificationsPage = () => {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [selectedDocIndex, setSelectedDocIndex] = useState<number | null>(null);
+  const [selectedImgIndex, setSelectedImgIndex] = useState(0);
   const [scale, setScale] = useState(1);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
 
@@ -20,7 +21,7 @@ const CertificationsPage = () => {
   }, []);
 
   useEffect(() => {
-    if (selectedIndex !== null) {
+    if (selectedDocIndex !== null) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
@@ -29,34 +30,63 @@ const CertificationsPage = () => {
     return () => {
       document.body.style.overflow = 'unset';
     };
-  }, [selectedIndex]);
+  }, [selectedDocIndex]);
 
   const documents = [
-    { id: 1, title: "Certificate of Registration 1", type: "Registration", img: `${certificateAssetBase}/Cert%20Of%20Reg/Cert%20Of%20Reg%201.jpg` },
-    { id: 2, title: "Certificate of Registration 2", type: "Registration", img: `${certificateAssetBase}/Cert%20Of%20Reg/Cert%20Of%20Reg%202.jpg` },
-    { id: 3, title: "Certificate of Registration 3", type: "Registration", img: `${certificateAssetBase}/Cert%20Of%20Reg/Cert%20Of%20Reg%203.jpg` },
-    { id: 4, title: "Certificate of Registration 4", type: "Registration", img: `${certificateAssetBase}/Cert%20Of%20Reg/Cert%20Of%20Reg%204.jpg` },
-    { id: 5, title: "DOLE Registration", type: "Registration", img: `${certificateAssetBase}/DOLE%20Reg/Dole%20Registration%20.jpg` },
-    { id: 6, title: "Mayor's Permit", type: "Permit", img: `${certificateAssetBase}/Mayors%20Permit/Mayors%20Permit.jpg` },
-    { id: 7, title: "SEC Amended Articles of Incorporation", type: "Incorporation", img: `${certificateAssetBase}/SEC/SEC%20Amended%20Articles%20of%20Incorp.jpg` },
-    { id: 8, title: "SEC Certificate of Incorporation", type: "Incorporation", img: `${certificateAssetBase}/SEC/SEC%20Cert%20Of%20Incorporation.jpg` },
+    { 
+      id: 1, 
+      title: "Certificate of Registration", 
+      type: "Registration", 
+      images: [
+        `${certificateAssetBase}/Cert%20Of%20Reg/Cert%20Of%20Reg%201.jpg`,
+        `${certificateAssetBase}/Cert%20Of%20Reg/Cert%20Of%20Reg%202.jpg`,
+        `${certificateAssetBase}/Cert%20Of%20Reg/Cert%20Of%20Reg%203.jpg`,
+        `${certificateAssetBase}/Cert%20Of%20Reg/Cert%20Of%20Reg%204.jpg`
+      ] 
+    },
+    { 
+      id: 2, 
+      title: "DOLE Registration", 
+      type: "Registration", 
+      images: [`${certificateAssetBase}/DOLE%20Reg/Dole%20Registration%20.jpg`] 
+    },
+    { 
+      id: 3, 
+      title: "Mayor's Permit", 
+      type: "Permit", 
+      images: [`${certificateAssetBase}/Mayors%20Permit/Mayors%20Permit.jpg`] 
+    },
+    { 
+      id: 4, 
+      title: "SEC Amended Articles of Incorporation", 
+      type: "Incorporation", 
+      images: [`${certificateAssetBase}/SEC/SEC%20Amended%20Articles%20of%20Incorp.jpg`] 
+    },
+    { 
+      id: 5, 
+      title: "SEC Certificate of Incorporation", 
+      type: "Incorporation", 
+      images: [`${certificateAssetBase}/SEC/SEC%20Cert%20Of%20Incorporation.jpg`] 
+    },
   ];
 
   const handleNext = useCallback((e?: React.MouseEvent) => {
     e?.stopPropagation();
-    if (selectedIndex === null) return;
-    setSelectedIndex((selectedIndex + 1) % documents.length);
+    if (selectedDocIndex === null) return;
+    const doc = documents[selectedDocIndex];
+    setSelectedImgIndex((prev) => (prev + 1) % doc.images.length);
     setScale(1);
     setOffset({ x: 0, y: 0 });
-  }, [selectedIndex, documents.length]);
+  }, [selectedDocIndex]);
 
   const handlePrev = useCallback((e?: React.MouseEvent) => {
     e?.stopPropagation();
-    if (selectedIndex === null) return;
-    setSelectedIndex((selectedIndex - 1 + documents.length) % documents.length);
+    if (selectedDocIndex === null) return;
+    const doc = documents[selectedDocIndex];
+    setSelectedImgIndex((prev) => (prev - 1 + doc.images.length) % doc.images.length);
     setScale(1);
     setOffset({ x: 0, y: 0 });
-  }, [selectedIndex, documents.length]);
+  }, [selectedDocIndex]);
 
   const handleZoomIn = () => setScale(prev => Math.min(prev + 0.5, 4));
   const handleZoomOut = () => {
@@ -65,22 +95,30 @@ const CertificationsPage = () => {
     setScale(newScale);
   }
 
+  const openLightbox = (idx: number) => {
+    setSelectedDocIndex(idx);
+    setSelectedImgIndex(0);
+    setScale(1);
+    setOffset({ x: 0, y: 0 });
+  };
+
   const closeLightbox = () => {
-    setSelectedIndex(null);
+    setSelectedDocIndex(null);
+    setSelectedImgIndex(0);
     setScale(1);
     setOffset({ x: 0, y: 0 });
   };
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (selectedIndex === null) return;
+      if (selectedDocIndex === null) return;
       if (e.key === 'ArrowRight') handleNext();
       if (e.key === 'ArrowLeft') handlePrev();
       if (e.key === 'Escape') closeLightbox();
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedIndex, handleNext, handlePrev]);
+  }, [selectedDocIndex, handleNext, handlePrev]);
 
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -154,11 +192,17 @@ const CertificationsPage = () => {
               {documents.map((doc, idx) => (
                 <div
                   key={doc.id}
-                  className="flex min-h-[360px] flex-col justify-between border-b border-r border-black/5 bg-white p-5 sm:min-h-[420px] sm:p-6 md:p-8 lg:min-h-[500px] lg:p-10"
+                  className="flex min-h-[360px] flex-col justify-between border-b border-r border-black/5 bg-white p-5 sm:min-h-[420px] sm:p-6 md:p-8 lg:min-h-[500px] lg:p-10 cursor-pointer group"
+                  onClick={() => openLightbox(idx)}
                 >
-                  <div className="group flex flex-1 items-center justify-center overflow-hidden bg-surface-container-lowest p-4 sm:p-6 md:p-8">
+                  <div className="relative flex flex-1 items-center justify-center overflow-hidden bg-surface-container-lowest p-4 sm:p-6 md:p-8">
+                    {doc.images.length > 1 && (
+                      <div className="absolute top-2 right-2 bg-primary text-white text-[9px] font-bold px-2 py-1 rounded-sm uppercase tracking-widest z-10 pointer-events-none">
+                        {doc.images.length} Pages
+                      </div>
+                    )}
                     <img
-                      src={doc.img}
+                      src={doc.images[0]}
                       alt={doc.title}
                       className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-700"
                       loading="lazy"
@@ -171,7 +215,7 @@ const CertificationsPage = () => {
                     <span className="text-primary font-bold uppercase text-[9px] tracking-[0.3em] block mb-4">{doc.type}</span>
                     <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
                       <h3 className="text-xl font-extrabold uppercase italic leading-none tracking-tighter text-on-background sm:text-2xl">{doc.title}</h3>
-                      <button onClick={() => setSelectedIndex(idx)} className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-primary hover:underline">
+                      <button className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-primary hover:underline">
                         <Maximize2 className="w-5 h-5" /> View
                       </button>
                     </div>
@@ -205,7 +249,7 @@ const CertificationsPage = () => {
 
       {/* Advanced Lightbox */}
       <AnimatePresence>
-        {selectedIndex !== null && (
+        {selectedDocIndex !== null && (
           <m.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -215,14 +259,20 @@ const CertificationsPage = () => {
           >
             <div className="flex flex-col gap-4 border-b border-white/5 p-4 sm:flex-row sm:items-center sm:justify-between sm:p-6 md:p-8">
               <div className="flex flex-col">
-                <span className="text-primary font-bold uppercase text-[10px] tracking-[0.4em] mb-2">{documents[selectedIndex].type}</span>
-                <h4 className="text-xl font-bold text-white uppercase italic tracking-tighter">{documents[selectedIndex].title}</h4>
+                <span className="text-primary font-bold uppercase text-[10px] tracking-[0.4em] mb-2">{documents[selectedDocIndex].type}</span>
+                <h4 className="text-xl font-bold text-white uppercase italic tracking-tighter">{documents[selectedDocIndex].title}</h4>
               </div>
               <div className="flex flex-wrap items-center gap-3 sm:gap-4 md:gap-8">
                 <div className="hidden lg:flex items-center gap-4 text-white/30 text-[9px] font-bold tracking-widest uppercase">
                   <span>Scroll to Zoom</span>
                   <span className="mx-2">•</span>
                   <span>Drag to Pan</span>
+                  {documents[selectedDocIndex].images.length > 1 && (
+                    <>
+                      <span className="mx-2">•</span>
+                      <span>Arrows to change page</span>
+                    </>
+                  )}
                 </div>
                 <div className="flex items-center gap-2 bg-white/5 p-2 rounded-xl">
                   <button onClick={handleZoomOut} className="p-2 hover:bg-white/10 rounded-lg text-white/60 hover:text-white transition-colors"><ZoomOut size={18} /></button>
@@ -235,17 +285,19 @@ const CertificationsPage = () => {
 
             <div className="flex-1 relative overflow-hidden" ref={containerRef}>
               <div className="absolute inset-0 flex cursor-grab items-center justify-center p-4 active:cursor-grabbing sm:p-6 md:p-10 lg:p-20">
-                <button
-                  onClick={handlePrev}
-                  className="absolute left-3 z-30 rounded-full border border-white/10 bg-on-background/40 p-3 text-white backdrop-blur-md transition-all hover:bg-primary sm:left-5 sm:p-4 md:left-8 md:p-6"
-                >
-                  <ChevronLeft />
-                </button>
+                {documents[selectedDocIndex].images.length > 1 && (
+                  <button
+                    onClick={handlePrev}
+                    className="absolute left-3 z-30 rounded-full border border-white/10 bg-on-background/40 p-3 text-white backdrop-blur-md transition-all hover:bg-primary sm:left-5 sm:p-4 md:left-8 md:p-6"
+                  >
+                    <ChevronLeft />
+                  </button>
+                )}
 
                 <div className="w-full h-full flex items-center justify-center overflow-hidden pointer-events-none">
                   <m.img
-                    key={selectedIndex}
-                    src={documents[selectedIndex].img}
+                    key={`${selectedDocIndex}-${selectedImgIndex}`}
+                    src={documents[selectedDocIndex].images[selectedImgIndex]}
                     drag={scale > 1}
                     dragElastic={0}
                     dragMomentum={false}
@@ -271,18 +323,22 @@ const CertificationsPage = () => {
                   />
                 </div>
 
-                <button
-                  onClick={handleNext}
-                  className="absolute right-3 z-30 rounded-full border border-white/10 bg-on-background/40 p-3 text-white backdrop-blur-md transition-all hover:bg-primary sm:right-5 sm:p-4 md:right-8 md:p-6"
-                >
-                  <ChevronRight />
-                </button>
+                {documents[selectedDocIndex].images.length > 1 && (
+                  <button
+                    onClick={handleNext}
+                    className="absolute right-3 z-30 rounded-full border border-white/10 bg-on-background/40 p-3 text-white backdrop-blur-md transition-all hover:bg-primary sm:right-5 sm:p-4 md:right-8 md:p-6"
+                  >
+                    <ChevronRight />
+                  </button>
+                )}
               </div>
             </div>
 
-            <div className="relative z-30 border-t border-white/5 bg-on-background/90 p-4 text-center backdrop-blur-xl sm:p-6 md:p-8">
-              <p className="text-[10px] font-bold text-white/40 uppercase tracking-[0.4em]">{selectedIndex + 1} of {documents.length} verified credentials</p>
-            </div>
+            {documents[selectedDocIndex].images.length > 1 && (
+              <div className="relative z-30 border-t border-white/5 bg-on-background/90 p-4 text-center backdrop-blur-xl sm:p-6 md:p-8">
+                <p className="text-[10px] font-bold text-white/40 uppercase tracking-[0.4em]">Page {selectedImgIndex + 1} of {documents[selectedDocIndex].images.length}</p>
+              </div>
+            )}
           </m.div>
         )}
       </AnimatePresence>
